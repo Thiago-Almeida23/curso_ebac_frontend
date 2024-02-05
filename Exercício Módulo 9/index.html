@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="task-app">
+        <h2>LISTA DE TAREFAS</h2>
+        <div id="form-container">
+            <form id="task-form">
+                <input type="text" id="task-name" placeholder="Digite uma nova tarefa" required>
+                <button type="submit">Adicionar tarefa</button>
+            </form>
+        </div>
+        <div id="task-container">
+            <ul id="task-list"></ul>
+        </div>
+    </div>
+    <footer>
+        <p class="footer-text">Desenvolvido por: Thiago Almeida</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
