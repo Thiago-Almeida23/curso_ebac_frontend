@@ -1,0 +1,114 @@
+@import "variaveis.less";
+@import "maps.less";
+@breakpointMobile: ~"(max-width: 767px)";
+@breakpointTablet: ~"(min-width: 768px) and (max-width: 1023px)";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: @font-family;
+    color: #colors[corSecundaria];
+}
+
+.container {
+    width: 100%;
+    padding: 10px;
+
+    @media @breakpointTablet {
+        max-width: 80%;
+    }
+
+    @media @breakpointMobile {
+        max-width: 70%;
+    }
+
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+header {
+    background-color: #colors[corPrimaria];
+    color: #colors[corDoTexto];
+}
+
+.branding {
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+nav {
+    ul.menu {
+        list-style-type: none;
+        display: flex;
+        li {
+            margin-left: 30px;
+            a {
+                color: #colors[corDoTexto];
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+section {
+    h2 {
+        color: #colors[corPrimaria];
+    }
+}
+
+.products {
+    list-style-type: none;
+    padding: 10px 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+
+    li.product-item {
+        width: 200px;
+        margin-bottom: 40px;
+        padding-right: 20px;
+        box-sizing: border-box; 
+
+        img {
+            max-width: 100%;
+            height: auto;
+            padding-bottom: 5px;
+        }
+        h4 {
+            color: #colors[corPrimaria];
+            padding-bottom: 5px;
+        }
+        p {
+            color: #colors[corSecundaria];
+            padding-bottom: 20px;
+        }
+        .product-button {
+            background-color: #colors[corPrimaria];
+            color: #colors[corDoTexto];
+            padding: 10px 20px;
+            text-decoration: none;
+            text-align: center;
+            margin: 0 auto;
+            display: block; 
+            &:hover {
+                background-color: darken(@corPrimaria, 10%);
+            }
+        }
+    }
+}
+
